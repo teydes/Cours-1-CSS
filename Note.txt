@@ -1,0 +1,26 @@
+1rem = 16px
+px: taille de l’élément fixée en pixels.
+em: taille de l’élément fixée par rapport à celle de son élément parent.
+text-shadow: 5px 0 0 darkcyan (1- axe de x "horizontal de gauche à droite" ; 2- axe de y ; "3- blur "effet floue" vertical de bas en haut")(l'ombre derrière est décalé de 5px sur l'axe de x)
+rgba : le a à la fin correspond à l'opcaité.
+center/cover : Evite de repeter une image.
+vh : viewport height (Hauteur de l'ecran utilisateur)
+vw : viewport width (largeur de l'ecran utilisateur)
+overflow:hidden permet d'enlever le scroll
+fixed: permet de fixer l'ecran, l'image ne bouge jamais.
+
+En hauteur, on parle souvent de pixels.
+En largeur, on parle souvent de %.
+Pour centrer un élément, on va dans le sens d'une montre (margin: haut,droite,bas,gauche). le haut = bas; gauche = droite
+margin: marge extérieure.
+padding: marge intérieure.
+Pour definir le padding d'un box, on va dans le sens d'une montre (padding: haut,droite,bas,gauche). le haut = bas; gauche = droite
+* Lorsque tu fais h2, tu as des marges automatiques => *{ margin: 0}
+
+Pour définir un sous élément en position absolute, il faut définir son élément parent en position relative afin qu'il reste toujours dans le boxe général.
+CSS centre les elemets quand ils sont absolus; on utilise transform: translateX
+
+Pour faire passer un élément en dessous des autres on le fait passer en z-index negatif (z-index: -1)
+
+/************* Flexbox **********/
+Avec flexbox, on est pas obligé d'être en absolute pour centrer un élément.

@@ -1,0 +1,179 @@
+/* Fil rouge : selecteur, dimensions, couleurs */
+/* Texte */
+/* Background */
+/* Boxes */
+/* Positioning */
+/* Flexbox */
+/* Grid */
+/* Pseudo Classe */
+/* Responsive */
+/* Debug */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+@font-face {
+    font-family: "font-1";
+    src: url(./assets/NotoSansDisplay-Medium.ttf);
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background */
+body {
+    font-family: "font-1", serif;
+    background: url(./assets/CSS-ConvertImage.jpg) no-repeat fixed center/cover;
+    height:100vh; /* 100% de l"ecran utilisateur*/
+}
+
+/* Texte */
+h1 {
+    text-transform: uppercase; /* Permet de transformer le texte */
+    letter-spacing: 2px; /* Mets les espaces entre les lettres*/
+    font-size: 2.5rem; /* Modifier la taille */
+    color: rgb(5, 255, 240);
+    text-shadow: -1px 3px 3px darkcyan; /* Mets une ombre*/
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+/* BOXES */
+main {
+    background: whitesmoke;
+    width: 90%;
+    height: 700px;
+    margin: 10px auto; /* margin: 0 auto ; Pour centrer un élément */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px 5px rgba(0,0,0,0.253);
+}
+
+.positioning,
+.flexbox,
+.grid {
+    border: 2px solid skyblue;
+    padding: 10px;
+    margin-top:20px;
+    border-radius: 10px;
+}
+/************* Positioning **********/
+.positioning {
+    position: relative;
+
+}
+#circle {
+    height: 60px;
+    width: 60px;
+    background: skyblue;
+    padding: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: 110px;
+    box-shadow: 0 2px 12px 5px rgba(51,51,51,0.13);
+    z-index: 1;
+}
+
+#rectangle {
+    height:15px;
+    width: 100px;
+    background: blue;
+    padding: 20px;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%); /* Revenir à sa position d'origine - centrée*/
+}
+
+/************* Flexbox **********/
+ul{
+    display: flex; /* Mets toutes liens sur la même ligne*/
+    justify-content: space-around; /* Justify-content : determine l'espace entre 2 éléments*/
+    padding: 0;
+}
+li{
+    list-style-type: none;
+    font-size: 0.7rem;
+    height: 160px;
+    width: 160px;
+    background: turquoise;
+    /* Centrer Verticalement */
+    display: flex;
+    align-items: center; /* Centre les éléments */
+    justify-content: center;
+}
+
+/************* Grid **********/
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%; /* Pourcentage déterminé en fonction des éléments dans la div*/
+    padding: 20px;
+}
+
+.img {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1fr = un fraction */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:  /* Permet de dessiner le formulaire*/
+        'i1 i2'
+        'ta ta'
+        'bt bt';
+}
+input,textarea {
+    margin: 5px;
+    height: 45px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: "font-1", serif;
+}
+
+#firstname {
+    grid-area: i1;
+}
+
+#surname {
+    grid-area: i2;
+}
+
+textarea {
+    grid-area: ta;
+    resize: none;
+}
+input[type="submit"] { /* Permet de selectionner le dernier élément*/
+    grid-area: bt;
+    cursor: pointer;
+    background: cyan;
+    transition: 0.4s;
+}
+
+input[type="submit"]:hover {
+    background: goldenrod;
+    color: white;
+}
+
+/***************** Media Query *************/
+@media screen and (max-width:1000px) {
+    .grid-container {
+        display: block;
+    }
+}
+
+@media screen and (max-width:780px) {
+    form {
+        grid-template-columns: 1fr ; /* 1fr = un fraction */
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:  /* Permet de dessiner le formulaire*/
+                "i1"
+                "i2"
+                "ta"
+                "bt"
+      ;
+    }
+}

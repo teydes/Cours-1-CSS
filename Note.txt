@@ -4,9 +4,9 @@ em: taille de l’élément fixée par rapport à celle de son élément parent.
 text-shadow: 5px 0 0 darkcyan (1- axe de x "horizontal de gauche à droite" ; 2- axe de y ; "3- blur "effet floue" vertical de bas en haut")(l'ombre derrière est décalé de 5px sur l'axe de x)
 rgba : le a à la fin correspond à l'opcaité.
 center/cover : Evite de repeter une image.
-vh : viewport height (Hauteur de l'ecran utilisateur)
+vh : viewport height (Hauteur de l'ecran utilisateur).
 vw : viewport width (largeur de l'ecran utilisateur)
-overflow:hidden permet d'enlever le scroll
+overflow:hidden permet d'enlever le scroll.
 fixed: permet de fixer l'ecran, l'image ne bouge jamais.
 
 En hauteur, on parle souvent de pixels.
